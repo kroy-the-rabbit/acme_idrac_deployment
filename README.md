@@ -34,7 +34,7 @@ acme.sh --deploy -d "idrac.domain.com"  --deploy-hook idrac
 
 ```
 
-Script default, run in docker on MacOS
+Script default, run in docker on MacOS (with Docker Desktop)
 
 ```
 
@@ -47,7 +47,7 @@ docker run -it justinclayton/racadm -r "$Le_Deploy_idrac_host" -u "$Le_Deploy_id
 
 ```
 
-To run on Windows or Linux where `racadm` is native:
+To run on Windows or Linux where `racadm` is native, comment out above and change guts to this:
 
 
 ```

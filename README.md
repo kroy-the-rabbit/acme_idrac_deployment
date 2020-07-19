@@ -38,12 +38,12 @@ Script default, run in docker on MacOS
 
 ```
 
-     docker-machine rm default && docker-machine create default --driver virtualbox
-     eval "$(docker-machine env default)"
+docker-machine rm default && docker-machine create default --driver virtualbox
+eval "$(docker-machine env default)"
 
-     docker run -v "/Users/kroy/Documents/:/Users/kroy/Documents/" -it justinclayton/racadm -r "$Le_Deploy_idrac_host" -u "$Le_Deploy_idrac_user" -p"$Le_Deploy_idrac_pass"           sslkeyupload -t 1 -f $_ckey
-     docker run -v "/Users/kroy/Documents/:/Users/kroy/Documents/" -it justinclayton/racadm -r "$Le_Deploy_idrac_host" -u "$Le_Deploy_idrac_user" -p"$Le_Deploy_idrac_pass"           sslcertupload -t 1 -f $_cfullchain
-     docker run -it justinclayton/racadm -r "$Le_Deploy_idrac_host" -u "$Le_Deploy_idrac_user" -p"$Le_Deploy_idrac_pass" racreset
+docker run -v "/Users/kroy/Documents/:/Users/kroy/Documents/" -it justinclayton/racadm -r "$Le_Deploy_idrac_host" -u "$Le_Deploy_idrac_user" -p"$Le_Deploy_idrac_pass"           sslkeyupload -t 1 -f $_ckey
+docker run -v "/Users/kroy/Documents/:/Users/kroy/Documents/" -it justinclayton/racadm -r "$Le_Deploy_idrac_host" -u "$Le_Deploy_idrac_user" -p"$Le_Deploy_idrac_pass"           sslcertupload -t 1 -f $_cfullchain
+docker run -it justinclayton/racadm -r "$Le_Deploy_idrac_host" -u "$Le_Deploy_idrac_user" -p"$Le_Deploy_idrac_pass" racreset
 
 ```
 
@@ -51,8 +51,8 @@ To run on Windows or Linux where `racadm` is native:
 
 
 ```
-     path/to/racadm -r "$Le_Deploy_idrac_host" -u "$Le_Deploy_idrac_user" -p"$Le_Deploy_idrac_pass" sslkeyupload -t 1 -f $_ckey
-     path/to/racadm -r "$Le_Deploy_idrac_host" -u "$Le_Deploy_idrac_user" -p"$Le_Deploy_idrac_pass" sslcertupload -t 1 -f $_cfullchain
-     path/to/racadm -r "$Le_Deploy_idrac_host" -u "$Le_Deploy_idrac_user" -p"$Le_Deploy_idrac_pass" racreset
+path/to/racadm -r "$Le_Deploy_idrac_host" -u "$Le_Deploy_idrac_user" -p"$Le_Deploy_idrac_pass" sslkeyupload -t 1 -f $_ckey
+path/to/racadm -r "$Le_Deploy_idrac_host" -u "$Le_Deploy_idrac_user" -p"$Le_Deploy_idrac_pass" sslcertupload -t 1 -f $_cfullchain
+path/to/racadm -r "$Le_Deploy_idrac_host" -u "$Le_Deploy_idrac_user" -p"$Le_Deploy_idrac_pass" racreset
 
 ```
